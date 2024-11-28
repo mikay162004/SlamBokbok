@@ -49,13 +49,14 @@
 
     <!-- Category Buttons -->
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="48dp"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/subtext"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="150dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtext">
 
         <!-- My Slam Button -->
         <Button
@@ -78,33 +79,23 @@
 
     <!-- RecyclerView to display slams -->
 
+    <!-- Bottom Navigation Icons -->
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/slamRecyclerView"
         android:layout_width="365dp"
         android:layout_height="258dp"
         android:layout_margin="16dp"
-        app:layout_constraintBottom_toTopOf="@id/displayDataTextView"
+        android:layout_marginTop="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
+        app:layout_constraintVertical_bias="0.726"
         tools:listitem="@layout/slam_item" />
 
-    <TextView
-        android:id="@+id/displayDataTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:padding="16dp"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Your Slam data will appear here" />
-
-    <!-- Bottom Navigation Icons -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
